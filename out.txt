@@ -1,5 +1,0 @@
-a	a	b	b	c	2	3	4	5	5
-a	b	b	d	d	1	1	2	2	2
-a	c	d	e	e	1	2	2	4	5
-b	c	c	d	d	1	1	2	2	5
-c	c	c	d	e	2	3	4	4	5
