@@ -1,4 +1,4 @@
-package l2.robot;
+package l2_reflection_robot.robot;
 
 import java.util.EnumMap;
 import java.util.Map;

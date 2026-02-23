@@ -1,4 +1,4 @@
-package l2.reflection_task70;
+package l2_reflection_robot.reflection_task70;
 
 import java.lang.reflect.InvocationTargetException;
 

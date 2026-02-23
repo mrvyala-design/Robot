@@ -1,4 +1,4 @@
-package l2.reflection_task71;
+package l2_reflection_robot.reflection_task71;
 
 public class Printer {
 

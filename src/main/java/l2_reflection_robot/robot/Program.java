@@ -1,4 +1,4 @@
-package l2.robot;
+package l2_reflection_robot.robot;
 
 public class Program {
     public static void main(String[] args) throws InterruptedException {

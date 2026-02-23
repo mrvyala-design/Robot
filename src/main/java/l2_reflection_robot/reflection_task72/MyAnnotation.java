@@ -1,4 +1,4 @@
-package l2.reflection_task72;
+package l2_reflection_robot.reflection_task72;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
