@@ -14,6 +14,7 @@ CREATE TABLE Person (
     letter TEXT
 );
 
+
 INSERT INTO Person
 (age, salary, passport, address, dateOfBirthday, dateTimeCreate, timeToLunch, letter)
 VALUES
