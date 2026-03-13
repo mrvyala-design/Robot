@@ -9,12 +9,7 @@ import java.util.ResourceBundle;
 public class Main {
     public static void main(String[] args) {
 
-        ResourceBundle rb = ResourceBundle.getBundle("database");
-        String url = rb.getString("url");
-        String username = rb.getString("user");
-        String password = rb.getString("password");
-
-        try (Connection conn = DriverManager.getConnection(url, username, password)) {
+        try (Connection conn = Connector.getConnection();) {
             createPersons(conn);
             selectPersons(conn);
         } catch (SQLException e) {
