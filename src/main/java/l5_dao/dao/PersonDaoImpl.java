@@ -28,7 +28,7 @@ public class PersonDaoImpl implements PersonDao {
 
             try (ResultSet rs = pstmt.getGeneratedKeys()) {
                 if (rs.next()) {
-                    long primaryKey = rs.getLong(1);
+                    Integer primaryKey = rs.getInt(1);
                     person.setId(primaryKey);
                 }
             }
@@ -42,7 +42,7 @@ public class PersonDaoImpl implements PersonDao {
         try (Connection connection = Connector.getConnection(); Statement stmt = connection.createStatement()) {
             try (ResultSet rs = stmt.executeQuery("SELECT * FROM people.person WHERE id = " + id)) {
                 if (rs.next()) {
-                    person.setId(rs.getLong("id"));
+                    person.setId(rs.getInt("id"));
                     person.setAge(rs.getInt("age"));
                     person.setSalary(rs.getDouble("salary"));
                     person.setPassport(rs.getString("passport"));
