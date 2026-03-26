@@ -2,6 +2,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import static org.junit.jupiter.api.Assertions.*;
 import l5_dao.dto.Person;
+import l6_hibernate.HibernateUtil;
 import l6_hibernate.PersonDaoHibernateImpl;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -21,7 +22,7 @@ public class PersonDaoHibernateImplTest {
 
     @BeforeAll
     static void init() {
-        emf = HibernateUtilTest.getEntityManager().getEntityManagerFactory();
+        emf = HibernateUtil.getEntityManager().getEntityManagerFactory();
 
     }
 
@@ -93,6 +94,7 @@ public class PersonDaoHibernateImplTest {
         List<Person> result = dao.findPersonsOlderThan(21);
 
         assertTrue(result.get(0).getAge() > 21);
+        assertEquals(1, result.size());
     }
 
     private Person createPerson() {
