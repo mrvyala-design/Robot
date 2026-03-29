@@ -1,105 +1,48 @@
 package l5_dao.dto;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "person")
 public class Person {
 
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column
     private int age;
+
+    @Column
     private double salary;
+
+    @Column
     private String passport;
+
+    @Column
     private String address;
+
+    @Column
     private LocalDate dateOfBirthday;
+
+    @Column
     private LocalDateTime dateTimeCreate;
+
+    @Column
     private LocalTime timeToLunch;
+
+    @Column
     private String letter;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public String getPassport() {
-        return passport;
-    }
-
-    public void setPassport(String passport) {
-        this.passport = passport;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public LocalDate getDateOfBirthday() {
-        return dateOfBirthday;
-    }
-
-    public void setDateOfBirthday(LocalDate dateOfBirthday) {
-        this.dateOfBirthday = dateOfBirthday;
-    }
-
-    public LocalDateTime getDateTimeCreate() {
-        return dateTimeCreate;
-    }
-
-    public void setDateTimeCreate(LocalDateTime dateTimeCreate) {
-        this.dateTimeCreate = dateTimeCreate;
-    }
-
-    public LocalTime getTimeToLunch() {
-        return timeToLunch;
-    }
-
-    public void setTimeToLunch(LocalTime timeToLunch) {
-        this.timeToLunch = timeToLunch;
-    }
-
-    public String getLetter() {
-        return letter;
-    }
-
-    public void setLetter(String letter) {
-        this.letter = letter;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", age=" + age +
-                ", salary=" + salary +
-                ", passport='" + passport + '\'' +
-                ", address='" + address + '\'' +
-                ", dateOfBirthday=" + dateOfBirthday +
-                ", dateTimeCreate=" + dateTimeCreate +
-                ", timeToLunch=" + timeToLunch +
-                ", letter='" + letter + '\'' +
-                '}';
-    }
 }
